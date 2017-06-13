@@ -16,7 +16,7 @@ var bannerPlugin = new webpack.BannerPlugin(
   { raw: true }
 )
 
-function getBaseConfig () {
+function getBaseConfig() {
   return {
     entry: {
       app: path.resolve('./app.js')
@@ -39,18 +39,6 @@ function getBaseConfig () {
       // //   take { "extends": "standard" } for example
       // //   so you need: npm install eslint-plugin-standard --save-dev
       // // 3. set the config below
-      preLoaders: [
-        {
-          test: /\.vue$/,
-          loader: 'eslint',
-          exclude: /node_modules/
-        },
-        {
-          test: /\.js$/,
-          loader: 'eslint',
-          exclude: /node_modules/
-        }
-      ],
       loaders: [
         {
           test: /\.js$/,
